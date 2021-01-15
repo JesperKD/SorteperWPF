@@ -1,0 +1,23 @@
+﻿<Window x:Class="SorteperWPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SorteperWPF"
+        mc:Ignorable="d"
+        Title="Sorteper" Height="600" Width="1200" ResizeMode="NoResize">
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="/assets/1background.jpg"/>
+        </Grid.Background>
+        <ScrollViewer VerticalScrollBarVisibility="Disabled" HorizontalScrollBarVisibility="Visible" Width="800" HorizontalAlignment="Left" Margin="222,392,0,29.4">
+            <StackPanel x:Name="PlayerPanel" HorizontalAlignment="Left" Width="2000" RenderTransformOrigin="0.499,0.504" Background="#7F204665" Orientation="Horizontal">
+            </StackPanel>
+        </ScrollViewer>
+        <ScrollViewer VerticalScrollBarVisibility="Disabled" HorizontalScrollBarVisibility="Visible" Width="800" HorizontalAlignment="Left" Margin="222,0,0,416.4">
+            <StackPanel x:Name="CPUPanel" HorizontalAlignment="Left" Height="123" Margin="0,10,0,0" VerticalAlignment="Top" Width="2000" Background="#4C1800FF" Orientation="Horizontal">
+            </StackPanel>
+        </ScrollViewer>
+        <Button x:Name="MatchButton" Content="Match all" HorizontalAlignment="Left" Margin="1067,456,0,0" VerticalAlignment="Top" Width="89" Click="MatchButton_Click"/>
+    </Grid>
+</Window>

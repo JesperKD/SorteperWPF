@@ -1,0 +1,163 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{07C8E401-EB41-4F71-BDA0-36753CA4E3B6}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>SorteperWPF</RootNamespace>
+    <AssemblyName>SorteperWPF</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Card.cs" />
+    <Compile Include="DeckManager.cs" />
+    <Compile Include="GameManager.cs" />
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Player.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="assets\1background.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="assets\C1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="assets\Back.png" />
+    <Resource Include="assets\C10.png" />
+    <Resource Include="assets\C11.png" />
+    <Resource Include="assets\C12.png" />
+    <Resource Include="assets\C13.png" />
+    <Resource Include="assets\C2.png" />
+    <Resource Include="assets\C3.png" />
+    <Resource Include="assets\C4.png" />
+    <Resource Include="assets\C5.png" />
+    <Resource Include="assets\C6.png" />
+    <Resource Include="assets\C7.png" />
+    <Resource Include="assets\C8.png" />
+    <Resource Include="assets\C9.png" />
+    <Resource Include="assets\D1.png" />
+    <Resource Include="assets\D10.png" />
+    <Resource Include="assets\D11.png" />
+    <Resource Include="assets\D12.png" />
+    <Resource Include="assets\D13.png" />
+    <Resource Include="assets\D2.png" />
+    <Resource Include="assets\D3.png" />
+    <Resource Include="assets\D4.png" />
+    <Resource Include="assets\D5.png" />
+    <Resource Include="assets\D6.png" />
+    <Resource Include="assets\D7.png" />
+    <Resource Include="assets\D8.png" />
+    <Resource Include="assets\D9.png" />
+    <Resource Include="assets\H1.png" />
+    <Resource Include="assets\H10.png" />
+    <Resource Include="assets\H11.png" />
+    <Resource Include="assets\H12.png" />
+    <Resource Include="assets\H13.png" />
+    <Resource Include="assets\H2.png" />
+    <Resource Include="assets\H3.png" />
+    <Resource Include="assets\H4.png" />
+    <Resource Include="assets\H5.png" />
+    <Resource Include="assets\H6.png" />
+    <Resource Include="assets\H7.png" />
+    <Resource Include="assets\H8.png" />
+    <Resource Include="assets\H9.png" />
+    <Resource Include="assets\Joker.png" />
+    <Resource Include="assets\S1.png" />
+    <Resource Include="assets\S10.png" />
+    <Resource Include="assets\S11.png" />
+    <Resource Include="assets\S12.png" />
+    <Resource Include="assets\S13.png" />
+    <Resource Include="assets\S2.png" />
+    <Resource Include="assets\S3.png" />
+    <Resource Include="assets\S4.png" />
+    <Resource Include="assets\S5.png" />
+    <Resource Include="assets\S6.png" />
+    <Resource Include="assets\S7.png" />
+    <Resource Include="assets\S8.png" />
+    <Resource Include="assets\S9.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
