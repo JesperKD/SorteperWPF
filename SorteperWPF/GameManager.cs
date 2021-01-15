@@ -43,6 +43,26 @@ namespace SorteperWPF
         }
 
         /// <summary>
+        /// Returns a sorted list of the players Cards
+        /// </summary>
+        /// <returns></returns>
+        public List<Card> SortedPlayerHand()
+        {
+            List<Card> SortedList = player.Hand.OrderBy(o => o.Value).ToList();
+            return SortedList;
+        }
+
+        /// <summary>
+        /// Returns a sorted list of the CPU's cards
+        /// </summary>
+        /// <returns></returns>
+        public List<Card> SortedCPUHand()
+        {
+            List<Card> SortedList = cpu.Hand.OrderBy(o => o.Value).ToList();
+            return SortedList;
+        }
+
+        /// <summary>
         /// Registers and removes matching pairs from players hands
         /// </summary>
         public void FindPlayerPairs()
@@ -150,25 +170,6 @@ namespace SorteperWPF
             player.Hand.RemoveAt(cpuChoice);
         }
 
-        /// <summary>
-        /// Returns a sorted list of the players Cards
-        /// </summary>
-        /// <returns></returns>
-        public List<Card> SortedPlayerHand()
-        {
-            List<Card> SortedList = player.Hand.OrderBy(o => o.Value).ToList();
-            return SortedList;
-        }
-
-        /// <summary>
-        /// Returns a sorted list of the CPU's cards
-        /// </summary>
-        /// <returns></returns>
-        public List<Card> SortedCPUHand()
-        {
-            List<Card> SortedList = cpu.Hand.OrderBy(o => o.Value).ToList();
-            return SortedList;
-        }
 
     }
 }
