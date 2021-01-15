@@ -96,7 +96,11 @@ namespace SorteperWPF
             }
         }
 
-        public void RegisterCard(string imageName)
+        /// <summary>
+        /// Converts Selected Image to Card
+        /// </summary>
+        /// <param name="imageName"></param>
+        public Card ImageToCard(string imageName)
         {
             string[] splitString = imageName.Split('/');
             Card card = new Card(0);
@@ -122,7 +126,7 @@ namespace SorteperWPF
 
             card.Value = Convert.ToInt32(cardData.ToArray()[2]);
 
-            PlayerTurn(card);
+            return card;
         }
 
         /// <summary>

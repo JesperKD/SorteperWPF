@@ -102,9 +102,12 @@ namespace SorteperWPF
         private void Image_MouseLeftButtonDown(Object sender, MouseEventArgs e)
         {
             Image image = (Image)sender;
-            gameManager.RegisterCard(image.Source.ToString());
+
+            gameManager.PlayerTurn(gameManager.ImageToCard(image.Source.ToString()));
 
             UpdatePlayerCardVisual();
+
+            gameManager.CpuTurn();
             UpdateCpuCardVisual();
         }
 
